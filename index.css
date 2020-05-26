@@ -16,25 +16,27 @@ body {
 }
 
 .slider {
-  width: 95%;
+  width: 1400px;
   height: 750px;
   margin: auto;
   position: relative;
+  border-radius: 5px;
   background: #fff;
-  box-shadow: 0 4px 8px 0 rgba(186, 186, 207, 0.2),
-    0 20px 20px 10px rgba(186, 186, 207, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(32, 32, 70, 0.2),
+    0 20px 20px 10px rgba(32, 32, 70, 0.19);
 }
 
 blockquote {
-  width: 50%;
+  width: 45%;
   position: absolute;
-  top: 250px;
-  left: 80px;
+  top: 210px;
+  left: 110px;
   z-index: 3;
 }
 
 blockquote p {
   font-size: 3.2rem;
+  line-height: 4.5rem;
   font-weight: 300;
 }
 
@@ -50,8 +52,54 @@ blockquote footer strong {
 .portrait {
   position: absolute;
   top: 90px;
-  right: 100px;
+  right: 150px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(32, 32, 70, 0.2),
+    0 20px 20px 0 rgba(32, 32, 70, 0.19);
   z-index: 2;
+}
+
+.btns {
+  position: absolute;
+  right: 520px;
+  bottom: 95px;
+  display: flex;
+  justify-content: space-between;
+  height: 55px;
+  width: 115px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(32, 32, 70, 0.2),
+    0 20px 20px 10px rgba(32, 32, 70, 0.19);
+  z-index: 3;
+}
+
+.btns div {
+  width: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns div:hover {
+  cursor: pointer;
+}
+
+.bg {
+  position: absolute;
+  top: 25px;
+  right: 58px;
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+}
+
+.quotes {
+  position: absolute;
+  top: 190px;
+  left: 250px;
 }
 
 .hidden {
