@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
-
 html {
   font-size: 62.5%;
 }
@@ -10,9 +9,14 @@ body {
   margin: 0;
   padding: 0;
   color: hsl(240, 38%, 20%);
-  background: #eee;
+  background-color: #eee;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 100%;
 }
 
 .slider {
@@ -20,17 +24,33 @@ body {
   height: 750px;
   margin: auto;
   position: relative;
+  justify-content: space-between;
   border-radius: 5px;
-  background: #fff;
+  background-image: url('images/pattern-curve.svg');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(32, 32, 70, 0.2),
     0 20px 20px 10px rgba(32, 32, 70, 0.19);
 }
 
+.slide {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.quote-container {
+  padding: 160px 0 0 100px;
+}
+
 blockquote {
-  width: 45%;
+  background-image: url('images/pattern-quotes.svg');
+  background-repeat: no-repeat;
+  background-position: 20% 0%;
   position: absolute;
-  top: 210px;
-  left: 110px;
+  padding-top: 30px;
+  width: 45%;
   z-index: 3;
 }
 
@@ -49,20 +69,33 @@ blockquote footer strong {
   color: hsl(240, 38%, 20%);
 }
 
+.portrait-container {
+  position: absolute;
+  height: 90%;
+  width: 50%;
+  margin: 25px 50px;
+  background-image: url('images/pattern-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  z-index: 2;
+}
+
 .portrait {
   position: absolute;
-  top: 90px;
-  right: 150px;
-  border-radius: 5px;
+  top: 60px;
+  left: 60px;
   box-shadow: 0 4px 8px 0 rgba(32, 32, 70, 0.2),
     0 20px 20px 0 rgba(32, 32, 70, 0.19);
-  z-index: 2;
 }
 
 .btns {
   position: absolute;
-  right: 520px;
-  bottom: 95px;
+  left: 120px;
+  bottom: 50px;
   display: flex;
   justify-content: space-between;
   height: 55px;
@@ -85,33 +118,16 @@ blockquote footer strong {
   cursor: pointer;
 }
 
-.bg {
-  position: absolute;
-  top: 25px;
-  right: 58px;
-}
-
-.curve {
-  position: absolute;
-  bottom: 0;
-}
-
-.quotes {
-  position: absolute;
-  top: 190px;
-  left: 250px;
-}
-
 .hidden {
   display: none;
 }
 
 .attribution {
-  position: fixed;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
   padding: 1rem;
+  margin: 0;
   font-size: 1.1rem;
   text-align: center;
 }
@@ -168,5 +184,72 @@ blockquote footer strong {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1439px) {
+  .slider {
+    padding: 0 0 100px;
+    width: 100%;
+    max-width: 600px;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+    background-size: contain;
+  }
+
+  .slide {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
+  .portrait-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 50px auto;
+    padding: 50px;
+    width: 80%;
+  }
+
+  .portrait {
+    position: static;
+    align-self: center;
+    padding: 0;
+    width: 80%;
+  }
+
+  .btns {
+    position: absolute;
+    bottom: 25px;
+    left: 38%;
+    height: 50px;
+    width: 24%;
+  }
+
+  .quote-container {
+    padding: 0;
+    margin: 0;
+  }
+
+  blockquote {
+    background-position: center top;
+    position: static;
+    margin: 0 auto;
+    padding: 20px 0 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  blockquote p {
+    font-size: 2.5rem;
+  }
+
+  blockquote footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 3rem;
   }
 }
