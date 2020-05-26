@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: hsl(240, 38%, 20%);
+  background: #eee;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider {
+  width: 95%;
+  height: 750px;
+  margin: auto;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(186, 186, 207, 0.2),
+    0 20px 20px 10px rgba(186, 186, 207, 0.19);
+}
+
+blockquote {
+  width: 50%;
+  position: absolute;
+  top: 250px;
+  left: 80px;
+  z-index: 3;
+}
+
+blockquote p {
+  font-size: 3.2rem;
+  font-weight: 300;
+}
+
+blockquote footer {
+  font-size: 2rem;
+  color: hsl(240, 18%, 77%);
+}
+
+blockquote footer strong {
+  color: hsl(240, 38%, 20%);
+}
+
+.portrait {
+  position: absolute;
+  top: 90px;
+  right: 100px;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+.attribution {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
